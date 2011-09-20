@@ -14,7 +14,6 @@ end
 group :development do
   gem 'sqlite3'
 end
-
 group :test do
   gem 'sqlite3'
   # Pretty printed test output
@@ -33,7 +32,7 @@ group :assets do
   gem 'haml'
 end
 
-gem 'jquery-rails'
+# gem 'jquery-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
