@@ -3,14 +3,22 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.0'
 gem 'rake', '0.9.2'
 gem 'heroku'
+gem 'thin'
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 group :production do
   gem 'pg'
 end
-group :development, :test do
+group :development do
   gem 'sqlite3'
+end
+
+group :test do
+  gem 'sqlite3'
+  # Pretty printed test output
+  gem 'turn', :require => false
 end
 
 gem 'therubyracer'
@@ -36,7 +44,4 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
-end
+
