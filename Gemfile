@@ -9,7 +9,7 @@ gem 'thin'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 group :production do
-  gem 'pg'
+  gem 'sqlite3'
 end
 group :development do
   gem 'sqlite3'
@@ -32,7 +32,7 @@ group :assets do
   gem 'haml'
 end
 
-# gem 'jquery-rails'
+gem 'jquery-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
