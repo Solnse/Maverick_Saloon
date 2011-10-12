@@ -1,4 +1,6 @@
 Mavericksaloon::Application.routes.draw do
+  resources :products
+
   get "main/index"
 
   get "main/hayloft"
