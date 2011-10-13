@@ -10,6 +10,8 @@ Mavericksaloon::Application.routes.draw do
   get "main/entertainment"
 
   get "main/about"
+  
+  get "products/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

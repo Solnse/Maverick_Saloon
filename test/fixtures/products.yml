@@ -11,3 +11,9 @@ two:
   description: MyText
   image_url: MyString
   price: 9.99
+
+shirt:
+  title: Pink Burnout Tee
+  description: Bella Crewneck Tee in Soft Pink with Black Detail
+  image_url: thumbnail_DSC_0896.jpg
+  price: 26.00

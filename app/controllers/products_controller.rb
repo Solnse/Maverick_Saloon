@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
+  def store
+    @title = "Country Store"
+  end
   def index
     @products = Product.all
 
