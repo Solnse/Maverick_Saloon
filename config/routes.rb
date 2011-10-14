@@ -1,4 +1,6 @@
 Mavericksaloon::Application.routes.draw do
+  get "store/index"
+
   resources :products
 
   get "main/index"
@@ -12,7 +14,7 @@ Mavericksaloon::Application.routes.draw do
   get "main/about"
   
   get "products/index"
-
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -17,5 +17,9 @@ class MainController < ApplicationController
   def about
     @title = "About Us/Contact"
   end
+  
+  def store
+    @title = "Country Store"
+  end
 
 end

@@ -4,8 +4,20 @@
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
     = csrf_meta_tag
-  %body{:class => controller.controller_name}
-    .container
-      = render 'layouts/header'
-      %section.round
-        = yield
+%body{:class => controller.controller_name}
+  #banner
+    = image_tag("logo.png")
+    = @page_title || "Maverick Saloon"
+  #columns
+    #side
+      %ul
+        %li
+          %a{:href => "http://www...."} Home
+        %li
+          %a{:href => "http://www..../faq"} Questions
+        %li
+          %a{:href => "http://www..../news"} News
+        %li
+          %a{:href => "http://www..../contact"} Contact
+    #main
+      = yield
