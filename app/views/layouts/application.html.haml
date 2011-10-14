@@ -12,12 +12,14 @@
     #side
       %ul
         %li
-          %a{:href => "http://www...."} Home
+          = link_to 'Home', main_index_path
         %li
-          %a{:href => "http://www..../faq"} Questions
+          = link_to 'The Hayloft Grill', main_hayloft_path
         %li
-          %a{:href => "http://www..../news"} News
+          = link_to 'Country Store', store_path
         %li
-          %a{:href => "http://www..../contact"} Contact
+          = link_to 'Events Calendar', main_entertainment_path
+        %li
+          = link_to 'About Us', main_about_path
     #main
       = yield
