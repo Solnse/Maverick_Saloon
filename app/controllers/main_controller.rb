@@ -1,4 +1,6 @@
 class MainController < ApplicationController
+  skip_before_filter :authorize
+  
   def index
   end
 
@@ -19,7 +21,7 @@ class MainController < ApplicationController
   end
   
   def store
-    @title = "Country Store"
+    @title = "General Store"
   end
 
 end
