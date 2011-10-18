@@ -1,6 +1,14 @@
 class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
+  
+  def who_bought
+    @product = Product.find(params[:id])
+    respond_to do |format|
+      format.atom
+    end
+  end
+  
   def store
     @title = "Country Store"
   end

@@ -1,25 +1,29 @@
+!!!
 %html
   %head
-    %title= @title
+    = title
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
     = csrf_meta_tag
-%body{:class => controller.controller_name}
-  #banner
-    = image_tag("logo.png")
-    = @page_title || "Maverick Saloon"
-  #columns
-    #side
-      %ul
-        %li
-          = link_to 'Home', main_index_path
-        %li
-          = link_to 'The Hayloft Grill', main_hayloft_path
-        %li
-          = link_to 'Country Store', store_path
-        %li
-          = link_to 'Events Calendar', main_entertainment_path
-        %li
-          = link_to 'About Us', main_about_path
-    #main
-      = yield
+  %body{:class => controller.controller_name}
+    #banner
+      = image_tag("logo.png")
+      = title
+    #columns
+      #side
+        #cart
+          - if @cart
+            = hidden_div_if(@cart.line_items.empty?, id: 'cart') { render @cart }
+        %ul
+          %li
+            = link_to 'Home', main_index_path
+          %li
+            = link_to 'The Hayloft Grill', main_hayloft_path
+          %li
+            = link_to 'Country Store', store_path
+          %li
+            = link_to 'Events Calendar', main_entertainment_path
+          %li
+            = link_to 'About Us', main_about_path
+      #main
+        = yield

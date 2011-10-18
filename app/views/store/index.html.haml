@@ -1,6 +1,6 @@
 - if notice
   %p#notice= notice
-%h1 The Maverick General Store Catalog
+%h1= title
 - @products.each do |product|
   .entry
     = image_tag(product.image_url)
@@ -8,4 +8,4 @@
     = sanitize(product.description)
     .price_line
       %span.price= number_to_currency(product.price)
-      = button_to 'Add to cart', line_items_path(product_id: product)
+      = button_to 'Add to cart', line_items_path(product_id: product), remote: true

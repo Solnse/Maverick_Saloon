@@ -1,0 +1,26 @@
+%h1 Listing orders
+
+%table
+  %tr
+    %th Name
+    %th Address
+    %th Email
+    %th Pay type
+    %th
+    %th
+    %th
+
+  - @orders.each do |order|
+    %tr
+      %td= order.name
+      %td= order.address
+      %td= order.email
+      %td= order.pay_type
+      %td= link_to 'Show', order
+      %td= link_to 'Edit', edit_order_path(order)
+      %td= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Order', new_order_path
+= will_paginate @orders
