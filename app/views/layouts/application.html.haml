@@ -1,12 +1,16 @@
 !!!
 %html
   %head
-    = title
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
     = csrf_meta_tag
   %body{:class => controller.controller_name}
     #banner
+      = form_tag store_path, class: 'locale' do
+        = select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), onchange: 'this.form.submit()'
+        = submit_tag 'submit'
+        = javascript_tag "$('.locale input').hide()"
+      = @page_title || t('.title')
       = image_tag("logo.png")
       = title
     #columns
@@ -20,7 +24,7 @@
           %li
             = link_to 'The Hayloft Grill', main_hayloft_path
           %li
-            = link_to 'Country Store', store_path
+            = link_to 'General Store', store_path
           %li
             = link_to 'Events Calendar', main_entertainment_path
           %li

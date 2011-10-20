@@ -1,6 +1,6 @@
 - if notice
   %p#notice= notice
-%h1= title
+%h1= t('.title_html')
 - @products.each do |product|
   .entry
     = image_tag(product.image_url)
@@ -8,4 +8,4 @@
     = sanitize(product.description)
     .price_line
       %span.price= number_to_currency(product.price)
-      = button_to 'Add to cart', line_items_path(product_id: product), remote: true
+      = button_to t('.add_html'), line_items_path(product_id: product), remote: true

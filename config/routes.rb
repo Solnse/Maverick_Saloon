@@ -1,36 +1,28 @@
 Mavericksaloon::Application.routes.draw do
   get 'admin' => 'admin#index'
+  get "store/index", as: 'store'
+  post "store/index", as: 'store'
   
   controller :sessions do
     get 'login' => :new
     post 'login' => :create
     delete 'logout' => :destroy
   end
-
-  resources :users
-
-  resources :orders
-
-  resources :line_items
-
-  resources :carts
-
-  get "store/index", as: 'store'
-
-  resources :products do
-    get :who_bought, on: :member
+  scope '(:locale)' do
+    resources :users
+    resources :orders
+    resources :line_items
+    resources :carts
+    resources :products do
+      get :who_bought, on: :member
+    end
   end
-
-  get "main/index"
-
-  get "main/hayloft"
-
-  get "main/merchandise"
-
-  get "main/entertainment"
-
-  get "main/about"
   
+  get "main/index"
+  get "main/hayloft"
+  get "main/merchandise"
+  get "main/entertainment"
+  get "main/about"
   get "products/index"
   
   # The priority is based upon order of creation:

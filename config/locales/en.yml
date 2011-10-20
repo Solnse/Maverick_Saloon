@@ -3,3 +3,44 @@
 
 en:
   hello: "Hello world"
+  
+  thanks:           "Thank you for your order"
+  
+  orders:
+    new:
+      legend:       "Please Enter Your Details"
+    form:
+      name:         "Name"
+      address_html: "Address"
+      email:        "E-mail"
+      pay_type:     "Pay with"
+      pay_prompt_html:  "Select a payment method"
+      submit:       "Place Order"
+  
+  currency:
+    format:
+      unit:      "$"
+      precision: "2"
+      separator: "."
+      delimiter: ","
+      format:    "%n%u"
+ 
+  carts:
+    title:        "Your Cart"
+    cart:
+      title:      "Your Cart"
+      empty:      "Empty cart"
+      checkout:   "Checkout"
+  
+  layouts:
+    application:
+      title:      "Maverick Saloon"
+      home:       "Home"
+      grill:      "The Hayloft Grill"
+      store:      "Country Store"
+      about:      "About Us"
+      
+  store:
+    index:
+      title_html: "Maverick Saloon"
+      add_html:   "Add to Cart"
