@@ -1,5 +1,9 @@
 es:
-  hello: "¡Hola, mundo."
+  hello:               "¡Hola, mundo."
+  
+  thanks:              "Gracias por su pedido"
+  
+  title:               "Maverick Saloon"
   
   orders:
     new:

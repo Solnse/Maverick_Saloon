@@ -3,6 +3,26 @@ class ApplicationController < ActionController::Base
   before_filter :authorize
   protect_from_forgery
   
+    def hayloft
+    @title = "The Hayloft Grill"
+  end
+
+  def merchandise
+    @title = "The Country Store"
+  end
+
+  def entertainment
+    @title = "Entertainment and Events"
+  end
+
+  def about
+    @title = "About Us/Contact"
+  end
+  
+  def store
+    @title = "General Store"
+  end
+  
   protected
   
     def set_i18n_locale_from_params

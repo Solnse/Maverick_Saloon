@@ -10,7 +10,6 @@
         = select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), onchange: 'this.form.submit()'
         = submit_tag 'submit'
         = javascript_tag "$('.locale input').hide()"
-      = @page_title || t('.title')
       = image_tag("logo.png")
       = title
     #columns

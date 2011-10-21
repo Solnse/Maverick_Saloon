@@ -6,6 +6,8 @@ en:
   
   thanks:           "Thank you for your order"
   
+  title:            "Maverick Saloon"
+  
   orders:
     new:
       legend:       "Please Enter Your Details"

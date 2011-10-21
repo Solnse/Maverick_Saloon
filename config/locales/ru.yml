@@ -3,6 +3,8 @@ ru:
   
   thanks:          "Спасибо за Ваш заказ"
   
+  title:           "ковбой салюн"
+  
   activerecord:
     errors:
       messages:

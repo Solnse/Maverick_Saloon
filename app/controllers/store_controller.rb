@@ -9,9 +9,4 @@ class StoreController < ApplicationController
       @cart = current_cart
     end
   end
-  
-  def store
-    @title = "General Store"
-  end
-
 end
