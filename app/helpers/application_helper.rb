@@ -3,10 +3,10 @@ module ApplicationHelper
   # Return a title on a per-page basis.
   def title
     base_title = "The Maverick Saloon"
-    if t('.title').nil?
+    if @title.nil?
       base_title
     else
-      "#{base_title} | #{t('.title')}"
+      "#{base_title} | #{@title}"
     end
   end
 

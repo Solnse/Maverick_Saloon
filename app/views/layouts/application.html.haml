@@ -6,7 +6,7 @@
     = csrf_meta_tag
   %body{:class => controller.controller_name}
     #banner
-      = form_tag root_path, class: 'locale' do
+      = form_tag store_path, class: 'locale' do
         = select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), onchange: 'this.form.submit()'
         = submit_tag 'submit'
         = javascript_tag "$('.locale input').hide()"
@@ -18,15 +18,15 @@
             = hidden_div_if(@cart.line_items.empty?, id: 'cart') { render @cart }
         %ul
           %li
-            = link_to 'Home', main_index_path
+            = link_to t('.home'), main_index_path
           %li
-            = link_to 'The Hayloft Grill', main_hayloft_path
+            = link_to t('.grill'), main_hayloft_path
           %li
-            = link_to 'General Store', store_path
+            = link_to t('.store'), store_path
           %li
-            = link_to 'Events Calendar', main_entertainment_path
+            = link_to t('.events'), main_entertainment_path
           %li
-            = link_to 'About Us', main_about_path
+            = link_to t('.about'), main_about_path
             
         - if session[:user_id]
           %ul

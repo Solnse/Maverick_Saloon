@@ -33,21 +33,28 @@
       margin-left: 100px;
       margin-top: 0;
       margin-bottom: 2px;
-      color: #227;
+      color: white;
     }
 
     p, div.price_line {
       margin-left: 100px;
       margin-top: 0.5em; 
       margin-bottom: 0.8em;
-
+      
       form, div {
         display: inline;
       }
     }
+    
+    .desc {
+      margin-left: 100px;
+      margin-top: 0.5em;
+      margin-bottom: 0.8em;
+      color: #300;
+    }
 
     .price {
-      color: #44a;
+      color: #300;
       font-weight: bold;
       margin-right: 3em;
     }

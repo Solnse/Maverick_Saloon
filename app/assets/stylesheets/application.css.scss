@@ -7,6 +7,14 @@
  *= require_self
  *= require_tree . 
 */
+.menu
+  p, ul {
+    color: white
+  }
+  h2, h1 {
+    color: #300
+  }
+
 .locale {
   float: right;
   margin: -0.25em 0.1em;
@@ -17,7 +25,7 @@
     
     legend {
       color: #dfd;
-      background: #141;
+      background: #300;
       font-family: sans-serif;
       padding: 0.2em 1em;
     }
@@ -45,11 +53,11 @@
   }
 }
 #banner {
-  background: #9c9;
+  background: #930;
   padding: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
+  color: #300;
   text-align: center;
 
   img {
@@ -67,12 +75,12 @@
 }
 
 #columns {
-  background: #141;
+  background: #300;
 
   #main {
     margin-left: 17em;
     padding: 1em;
-    background: white;
+    background: #930;
   }
 
 //#START:side
@@ -80,7 +88,7 @@
     float: left;
     padding: 1em 2em;
     width: 13em;
-    background: #141;
+    background: #300;
 
 /* START_HIGHLIGHT */
     form, div {
@@ -110,7 +118,7 @@
         list-style: none;
 
         a {
-          color: #bfb;
+          color: white;
           font-size: small;
         }
       }

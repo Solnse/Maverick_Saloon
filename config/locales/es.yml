@@ -57,6 +57,7 @@ es:
       home:            "Inicio"
       grill:           "El Grill Pajar"
       store:           "Almacén General"
+      events:          "Calendario de Eventos"
       about:           "Acerca de Nosotros"
 
   store:

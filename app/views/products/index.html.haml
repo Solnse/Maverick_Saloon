@@ -7,8 +7,7 @@
       %td.list_description
         %dl
           %dt= product.title
-          %dd= truncate(strip_tags(product.description),
-              length: 80)
+          %dd= truncate(strip_tags(product.description), length: 80)
       %td.list_actions
         = link_to 'Show', product
         %br/

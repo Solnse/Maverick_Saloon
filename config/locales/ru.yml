@@ -5,10 +5,19 @@ ru:
   
   title:           "ковбой салюн"
   
+  number:
+    currency:
+      format:
+        unit: "$US"
+        precision: 2
+        separator: "."
+        delimiter: " "
+        format: "%n %u"
+      
   activerecord:
     errors:
       messages:
-        inclusion: "Разве это не включено в список"
+        inclusion: "имеет непредусмотренное значение"
         blank:     "Не может быть пустым"
     models:
       order:       "Заказ"
@@ -36,16 +45,6 @@ ru:
       pay_prompt_html:      "Выберите метод оплаты"
       submit:               "Оформления заказа"
   
-  currency:
-    format:
-      format: "%n%u"
-      unit: "руб."
-      separator: "."
-      delimiter: " "
-      precision: 2
-      significant: false
-      strip_insignificant_zeros: false
-  
   carts:
     cart:
       title:           "Ваша корзина"
@@ -58,6 +57,7 @@ ru:
       home:            "домой"
       grill:           "гриль сеновале"
       store:           "универсальный магазин"
+      events:          "Календарь Событий"
       about:           "О нас"
 
   store:

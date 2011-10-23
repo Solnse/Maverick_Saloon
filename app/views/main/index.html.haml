@@ -1,8 +1,8 @@
 #content
   .title
     %h1
-    = link_to 'Home', main_index_path
-    = link_to 'The Hayloft Grill', main_hayloft_path
-    = link_to 'Country Store', store_path
-    = link_to 'Events Calendar', main_entertainment_path
-    = link_to 'About Us', main_about_path
+    = link_to t('.layouts.application.home'), main_index_path
+    = link_to t('hayloft'), main_hayloft_path
+    = link_to t('.layouts.application.store'), store_path
+    = link_to t('.layouts.application.calendar'), main_entertainment_path
+    = link_to t('.layouts.application.about'), main_about_path

@@ -4,19 +4,19 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   def hayloft
-    @title = "The Hayloft Grill"
+    @title = t('.layouts.application.grill')
   end
 
   def entertainment
-    @title = "Entertainment and Events"
+    @title = t('.layouts.application.events')
   end
 
   def about
-    @title = "About Us/Contact"
+    @title = t('.layouts.application.about')
   end
   
   def store
-    @title = "General Store"
+    @title = t('.layouts.application.store')
   end
   
   protected
