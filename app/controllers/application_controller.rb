@@ -3,12 +3,8 @@ class ApplicationController < ActionController::Base
   before_filter :authorize
   protect_from_forgery
   
-    def hayloft
+  def hayloft
     @title = "The Hayloft Grill"
-  end
-
-  def merchandise
-    @title = "The Country Store"
   end
 
   def entertainment

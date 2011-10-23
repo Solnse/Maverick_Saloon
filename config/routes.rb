@@ -1,7 +1,4 @@
 Mavericksaloon::Application.routes.draw do
-  get 'admin' => 'admin#index'
-  get "store/index", as: 'store'
-  post "store/index", as: 'store'
   
   controller :sessions do
     get 'login' => :new
@@ -24,6 +21,9 @@ Mavericksaloon::Application.routes.draw do
   get "main/entertainment"
   get "main/about"
   get "products/index"
+  get 'admin' => 'admin#index'
+  get "store/index", as: 'store'
+  post "store/index", as: 'store'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
