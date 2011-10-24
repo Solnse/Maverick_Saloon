@@ -7,6 +7,16 @@
  *= require_self
  *= require_tree . 
 */
+body {
+  background: #930 url(bg.jpg) top center no-repeat;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-family: Arial, Tahoma, Verdana;
+  margin: 0 auto 0;
+  padding: 0;
+  line-height: 20px;
+  }
+
 .menu
   p, ul {
     color: white
@@ -53,7 +63,7 @@
   }
 }
 #banner {
-  background: #930;
+  height: 150px;
   padding: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
@@ -76,6 +86,8 @@
 
 #columns {
   background: #300;
+  width: 500px;
+  align: center;
 
   #main {
     margin-left: 17em;
@@ -126,3 +138,4 @@
   }
 //#END:side
 }
+
