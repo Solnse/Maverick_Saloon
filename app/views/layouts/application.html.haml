@@ -4,8 +4,8 @@
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
     = csrf_meta_tag
-  
-  %body{:class => controller.controller_name}
+
+    %body{:class => controller.controller_name}
     #banner
       = form_tag store_path, class: 'locale' do
         = select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), onchange: 'this.form.submit()'

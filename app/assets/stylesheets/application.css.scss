@@ -9,7 +9,7 @@
 */
 body {
   background: #930 url(bg.jpg) top center no-repeat;
-  color: #FFFFFF;
+  color: #930;
   font-size: 12px;
   font-family: Arial, Tahoma, Verdana;
   margin: 0 auto 0;
@@ -63,12 +63,16 @@ body {
   }
 }
 #banner {
-  height: 150px;
+  background: url(logo2.png) left top no-repeat;
+  height: 185px;
   padding: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
   color: #300;
-  text-align: center;
+  text-align: right;
+  width: 930px;
+  margin-right: auto;
+  margin-left: auto;
 
   img {
     float: left;
@@ -86,8 +90,9 @@ body {
 
 #columns {
   background: #300;
-  width: 500px;
-  align: center;
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
 
   #main {
     margin-left: 17em;
@@ -97,7 +102,7 @@ body {
 
 //#START:side
   #side {
-    float: left;
+    float: center;
     padding: 1em 2em;
     width: 13em;
     background: #300;
