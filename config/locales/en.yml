@@ -12,12 +12,16 @@ en:
     new:
       legend:       "Please Enter Your Details"
     form:
-      name:         "Name"
-      address_html: "Address"
-      email:        "E-mail"
-      pay_type:     "Pay with"
-      pay_prompt_html:  "Select a payment method"
-      submit:       "Place Order"
+      name:                "Name"
+      address_line_1_html: "Address"
+      address_line_2_html: "line 2"
+      city_html:           "city"
+      state_html:          "state"
+      zip_code_html:       "zip code"
+      email:               "E-mail"
+      pay_type:            "Pay with"
+      pay_prompt_html:     "Select a payment method"
+      submit:              "Place Order"
   
   number:
     currency:

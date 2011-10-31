@@ -1,0 +1,17 @@
+%h1 Listing food_item_menus
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @food_item_menus.each do |food_item_menu|
+    %tr
+      %td= link_to 'Show', food_item_menu
+      %td= link_to 'Edit', edit_food_item_menu_path(food_item_menu)
+      %td= link_to 'Destroy', food_item_menu, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Food item menu', new_food_item_menu_path

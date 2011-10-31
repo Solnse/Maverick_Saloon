@@ -12,13 +12,25 @@
     = f.label :name
     = f.text_field :name, size: 40
   .field
-    = f.label :address, t('.address_html')
-    = f.text_area :address, rows: 3, cols: 40
+    = f.label :address_line_1, t('.address_line_1_html')
+    = f.text_field :address_line_1, size: 40
   .field
-    = f.label :email
+    = f.label :address_line_2, t('.address_line_2_html')
+    = f.text_field :address_line_2, size: 40
+  .field
+    = f.label :city, t('.city_html')
+    = f.text_field :city, size: 40
+  .field
+    = f.label :state, t('.state_html')
+    = f.text_field :state, size: 2
+  .field
+    = f.label :zip_code, t('.zip_code_html')
+    = f.text_field :zip_code, size: 7
+  .field
+    = f.label :email, t('.email')
     = f.text_field :email, size: 40
   .field
-    = f.label :pay_type
+    = f.label :pay_type, t('.pay_type')
     = f.select :pay_type, Order::PAYMENT_TYPES, prompt: t('.pay_prompt_html')
   .actions
     = f.submit t('.submit')

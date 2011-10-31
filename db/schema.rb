@@ -11,12 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111018192557) do
+ActiveRecord::Schema.define(:version => 20111028005336) do
 
   create_table "carts", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "food_item_menus", :force => true do |t|
+    t.integer  "food_item_id"
+    t.integer  "menu_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+# Could not dump table "food_items" because of following StandardError
+#   Unknown type 'category' for column 'string'
 
   create_table "line_items", :force => true do |t|
     t.integer  "product_id"
@@ -27,13 +37,24 @@ ActiveRecord::Schema.define(:version => 20111018192557) do
     t.integer  "order_id"
   end
 
+  create_table "menus", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "orders", :force => true do |t|
     t.string   "name"
-    t.text     "address"
     t.string   "email"
     t.string   "pay_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "address_line_1"
+    t.string   "address_line_2"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip_code"
   end
 
   create_table "products", :force => true do |t|

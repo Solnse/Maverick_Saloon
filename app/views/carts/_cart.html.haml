@@ -1,8 +1,10 @@
 .cart_title= t('.title')
 %table
   = render(cart.line_items)
+  %tr
+    %td{:colspan => "3"}
+      = button_to t('.checkout'), new_order_path, method: :get
+      = button_to t('.empty'), cart, method: :delete, confirm: 'Are you sure?'
   %tr.total_line
     %td{:colspan => "2"} Total
     %td.total_cell= number_to_currency(cart.total_price)
-= button_to t('.checkout'), new_order_path, method: :get
-= button_to t('.empty'), cart, method: :delete, confirm: 'Are you sure?'

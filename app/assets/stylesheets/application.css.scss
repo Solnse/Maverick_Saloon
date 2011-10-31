@@ -7,8 +7,9 @@
  *= require_self
  *= require_tree . 
 */
+
 body {
-  background: #930 url(bg.jpg) top center no-repeat;
+  background: #090000 url(bg.jpg) top center no-repeat;
   color: #930;
   font-size: 12px;
   font-family: Arial, Tahoma, Verdana;
@@ -31,7 +32,7 @@ body {
 }
 .depot_form {
   fieldset {
-    background: #efe;
+    background: #300;
     
     legend {
       color: #dfd;
@@ -43,6 +44,7 @@ body {
   
   form {
     label {
+      color: white;
       width: 5em;
       float: left;
       text-align: right;
@@ -90,21 +92,21 @@ body {
 
 #columns {
   background: #300;
-  width: 950px;
+  width: 970px;
   margin-left: auto;
   margin-right: auto;
 
   #main {
-    margin-left: 17em;
-    padding: 1em;
+    margin-left: 1em;
+    padding: 4em;
     background: #930;
   }
 
 //#START:side
   #side {
     float: center;
-    padding: 1em 2em;
-    width: 13em;
+    padding: 1em 1em;
+    width: 90%;
     background: #300;
 
 /* START_HIGHLIGHT */
@@ -129,14 +131,32 @@ body {
 
 /* END_HIGHLIGHT */
     ul {
+      width: auto;
+      float: left;
       padding: 0;
+      margin: 0 0 3em 0;
+      list-style: none;
+      background-color: #300;
+      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      border-right: 0px solid #ccc;
+      
 
       li {
-        list-style: none;
+        float: left;
 
         a {
+          display: block;
+          padding: 8px 15px;
+          text-decoration: none;
+          font-weight: bold;
           color: white;
-          font-size: small;
+          border-right: 1px solid #ccc;
+        }
+        a:hover {
+          color: #300;
+          background-color: #930;
         }
       }
     }

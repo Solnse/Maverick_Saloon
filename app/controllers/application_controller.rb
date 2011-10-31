@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     @title = t('.layouts.application.grill')
   end
 
-  def entertainment
+  def events
     @title = t('.layouts.application.events')
   end
 

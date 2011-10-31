@@ -1,0 +1,11 @@
+= render :partial => 'menu_header'
+
+- @food_items.each do |food_item|
+  .entry
+    = image_tag(food_item.img_url)
+    %h3= food_item.name
+    .desc
+      = sanitize(food_item.description)
+    .price_line
+      %span.price= number_to_currency(food_item.price)
+

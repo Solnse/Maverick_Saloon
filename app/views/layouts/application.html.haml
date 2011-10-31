@@ -21,7 +21,7 @@
           %li
             = link_to t('.home'), main_index_path
           %li
-            = link_to t('.grill'), main_hayloft_path
+            = link_to t('.grill'), menus_path
           %li
             = link_to t('.store'), store_path
           %li
@@ -37,6 +37,8 @@
               = link_to 'Products', products_path
             %li
               = link_to 'Users',    users_path
+            %li
+              = link_to 'Menu Items', food_items_path
           = button_to 'Logout', logout_path, method: :delete
       #main
         = yield

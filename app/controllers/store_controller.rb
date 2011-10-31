@@ -1,5 +1,9 @@
 class StoreController < ApplicationController
   skip_before_filter :authorize
+  
+  def store
+    @title = t('.layouts.application.store')
+  end
  
   def index
     if params[:set_locale]

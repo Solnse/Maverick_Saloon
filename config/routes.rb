@@ -1,5 +1,11 @@
 Mavericksaloon::Application.routes.draw do
   
+  resources :food_item_menus
+
+  resources :food_items
+
+  resources :menus
+
   controller :sessions do
     get 'login' => :new
     post 'login' => :create
@@ -16,7 +22,7 @@ Mavericksaloon::Application.routes.draw do
   end
   
   get "main/index"
-  get "main/hayloft"
+  get "menus/index", as: 'hayloft'
   get "main/merchandise"
   get "main/entertainment"
   get "main/about"
