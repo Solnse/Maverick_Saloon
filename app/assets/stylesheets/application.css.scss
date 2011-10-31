@@ -7,7 +7,18 @@
  *= require_self
  *= require_tree . 
 */
-
+#footer {
+  background: url(footer2.png) left top no-repeat;
+  height: 185px;
+  padding: 0px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #300;
+  text-align: right;
+  width: 950px;
+  margin-right: auto;
+  margin-left: auto;
+}
 body {
   background: #090000 url(bg.jpg) top center no-repeat;
   color: #930;
@@ -16,14 +27,6 @@ body {
   margin: 0 auto 0;
   padding: 0;
   line-height: 20px;
-  }
-
-.menu
-  p, ul {
-    color: white
-  }
-  h2, h1 {
-    color: #300
   }
 
 .locale {
@@ -100,6 +103,8 @@ body {
     margin-left: 1em;
     padding: 4em;
     background: #930;
+    
+    
   }
 
 //#START:side

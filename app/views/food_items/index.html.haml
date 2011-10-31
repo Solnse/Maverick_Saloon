@@ -1,20 +1,24 @@
-%h1= @title
-%table
-  - @food_items.each do |food_item|
-    %tr{:class => cycle('list_item_odd', 'list_item_even')}
-      %td
-        = image_tag(food_item.img_url, class: 'list_image')
-      %td.list_description
-        %dl
-          %dt= food_item.name
-          %dd= truncate(strip_tags(food_item.description), length: 80)
-      %td.list_actions
-        = link_to 'Show', food_item
-        %br/
-        = link_to 'Edit', edit_food_item_path(food_item)
-        %br/
-        = link_to 'Destroy', food_item, 
-           confirm: 'Are you sure?', 
-           method: :delete
+.food_items
+  %table
+    - @food_items.each do |food_item|
+      %tr{:class => cycle('list_line_odd', 'list_line_even')}
+        %td
+          - if food_item.img_url?
+            .list_image
+              = link_to image_tag(food_item.img_url, class: 'list_image'), asset_path(food_item.img_url), target: 'new'
+        %td.list_description
+          %dl
+            %h3= food_item.name
+            %dd= truncate(strip_tags(food_item.description), length: 80)
+        %td.category
+          = food_item.category
+        %td.list_actions
+          = link_to 'Show', food_item
+          %br/
+          = link_to 'Edit', edit_food_item_path(food_item)
+          %br/
+          = link_to 'Destroy', food_item, 
+             confirm: 'Are you sure?', 
+             method: :delete
 %br/
 = link_to 'New food item', new_food_item_path

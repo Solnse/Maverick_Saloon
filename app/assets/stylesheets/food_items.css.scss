@@ -1,3 +1,65 @@
-// Place all the styles related to the food_items controller here.
+// Place all the styles related to the menus controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.food_items {
+  .price {
+    color: #300;
+    font-weight: bold;
+    margin-right: 3em;
+  }
+  h3 {
+    color: #f00;
+  }
+  table {
+    border-collapse: collapse;
+  }
+
+  table tr td {
+    padding: 5px;
+    vertical-align: top;
+  }
+
+  .list_image {
+    img {
+      width:  250px;
+      height: auto;
+      align: center;
+    }
+  }
+  
+  .category {
+    font-weight: bold;
+  }
+
+  .list_description {
+    width: 60%;
+    color: white;
+
+    dl {
+      margin: 0;
+    }
+
+    dt {
+      color:        white;
+      font-weight:  bold;
+      font-size:    larger;
+    }
+
+    dd {
+      margin: 50;
+    }
+  }
+
+  .list_actions {
+    font-size:    x-small;
+    text-align:   right;
+    padding-left: 1em;
+  }
+
+  .list_line_even {
+    background: #a63100;
+  }
+  .list_line_odd {
+    background: #bf5b30;
+  }
+}

@@ -1,10 +1,12 @@
 = render :partial => 'menu_header'
 
-- @food_items.each do |food_item|
-  .entry
-    = image_tag(food_item.img_url)
+.menus
+  - @food_items.each do |food_item|
+    - if food_item.img_url?
+      .list_image
+        = link_to image_tag(food_item.img_url, class: 'list_image'), asset_path(food_item.img_url), target: 'new'
     %h3= food_item.name
-    .desc
+    .list_description
       = sanitize(food_item.description)
     .price_line
       %span.price= number_to_currency(food_item.price)

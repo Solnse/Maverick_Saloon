@@ -1,6 +1,11 @@
 %p#notice= notice
 
 %p
+  - if @food_item.img_url?
+    %b Image:
+    = link_to image_tag(@food_item.img_url, class: 'list_image'), asset_path(@food_item.img_url), target: 'new'
+
+%p
   %b Name:
   = @food_item.name
 %p
@@ -11,7 +16,7 @@
   = @food_item.img_url
 %p
   %b Price:
-  = @food_item.price
+  = number_to_currency(@food_item.price)
 %p
   %b Category:
   = @food_item.category
