@@ -11,7 +11,6 @@ gem 'haml-rails'
 
 group :production do
   gem 'pg'
-  gem 'taps'
 end
 group :development do
   gem 'sqlite3'
@@ -32,7 +31,6 @@ group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
-  gem 'haml-rails'
 end
 
 gem 'jquery-rails'
