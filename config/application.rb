@@ -51,9 +51,9 @@ module Mavericksaloon
     config.assets.version = '1.0'
     
     # suppress the initializatioin on precompile for Heroku
-    config.assets.initialize_on_precompile = false
+    # config.assets.initialize_on_precompile = false
     
     # Have Heroku automatically compile assets
-    config.assets.compile = true
+    # config.assets.compile = true
   end
 end

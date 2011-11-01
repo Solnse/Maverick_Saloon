@@ -5,13 +5,13 @@ gem 'rake', '0.9.2'
 gem 'heroku'
 gem 'thin'
 gem 'haml-rails'
-gem 'taps'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 group :production do
   gem 'pg'
+  gem 'taps'
 end
 group :development do
   gem 'sqlite3'
@@ -22,7 +22,7 @@ group :test do
   gem 'turn', :require => false
 end
 
-gem 'therubyracer'
+# gem 'therubyracer'
 gem 'will_paginate', '~> 3.0'
 
 
