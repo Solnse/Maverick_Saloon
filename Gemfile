@@ -13,7 +13,7 @@ gem 'therubyracer'
 
 group :production do
   gem 'pg'
-  gem 'taps'
+
 end
 group :development do
   gem 'sqlite3'
