@@ -6,13 +6,14 @@ gem 'heroku'
 gem 'thin'
 gem 'haml-rails'
 gem 'therubyracer'
-gem 'taps'
+
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 group :production do
   gem 'pg'
+  gem 'taps'
 end
 group :development do
   gem 'sqlite3'
