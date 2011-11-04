@@ -2,17 +2,12 @@
 %html
   %head
     = stylesheet_link_tag "application"
-    = stylesheet_link_tag "screen"
-    = stylesheet_link_tag "print"  
+    = stylesheet_link_tag "screen"  
     = javascript_include_tag "application"
     = csrf_meta_tag
 
     %body{:class => controller.controller_name}
     #banner
-      = form_tag store_path, class: 'locale' do
-        = select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), onchange: 'this.form.submit()'
-        = submit_tag 'submit'
-        = javascript_tag "$('.locale input').hide()"
     #columns
       #side
         #cart
@@ -30,6 +25,12 @@
           %li
             = link_to t('.about'), main_about_path
             
+        .localebutton
+          = form_tag store_path, class: 'locale' do
+            = select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), onchange: 'this.form.submit()'
+            = submit_tag 'submit'
+          = javascript_tag "$('.locale input').hide()"
+
         - if session[:user_id]
           %ul.admin_menu
             %li

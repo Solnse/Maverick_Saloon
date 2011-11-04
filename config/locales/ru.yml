@@ -39,7 +39,11 @@ ru:
       legend:               "Введите информацию о себе"
     form:
       name:                 "Имя"
-      address_html:         "Адрес"
+      address_line_1_html:  "Адрес"
+      address_line_2_html:  "строка 2"
+      city_html:            "город"
+      state_html:           "состояние"
+      zip_code_html:        "почтовый код"
       email:                "Электронная почта"
       pay_type:             "Платить"
       pay_prompt_html:      "Выберите метод оплаты"
