@@ -104,8 +104,6 @@ body {
     margin-left: 1em;
     padding: 4em;
     background: #930;
-    
-    
   }
 
 //#START:side
@@ -113,7 +111,6 @@ body {
     float: center;
     padding: 1em 1em;
     width: 90%;
-    background: #300;
 
 /* START_HIGHLIGHT */
     form, div {
@@ -140,7 +137,7 @@ body {
       width: auto;
       float: left;
       padding: 0;
-      margin: 0 0 3em 0;
+      margin: 0;
       list-style: none;
       background-color: #300;
       border-bottom: 1px solid #ccc;
@@ -148,7 +145,6 @@ body {
       border-left: 1px solid #ccc;
       border-right: 0px solid #ccc;
       
-
       li {
         float: left;
 
@@ -169,4 +165,5 @@ body {
   }
 //#END:side
 }
+
 
