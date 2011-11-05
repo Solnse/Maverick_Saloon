@@ -1,7 +1,22 @@
-#content
-  %h1
-    = link_to t('.layouts.application.home'), main_index_path
-    = link_to t('hayloft'), menus_path
-    = link_to t('.layouts.application.store'), store_path
-    = link_to t('.layouts.application.calendar'), main_entertainment_path
-    = link_to t('.layouts.application.about'), main_about_path
+.main-home
+  .top
+    .buttons
+      = link_to image_tag('entertainment_button.png'), main_entertainment_path
+      %br
+      = link_to image_tag('shop-apparel-button.png'), store_path
+      %br
+      = link_to image_tag('shop-wine-button.png'), store_path
+    .rotate-img
+      = link_to image_tag('kels-wines.jpg'), store_path
+      
+  .bottom
+    .left-side
+      %h1 Maverick Saloon, Santa Ynez – California
+      %p 
+        The Maverick Saloon, established in 1963, is one of the last original, thriving California saloons. |
+        Tucked away in the heart of the Santa Ynez Valley, the Maverick gives locals and visitors a taste of |
+        the Old West and makes everyone feel at home. The minute you step on the front porch you will see the |
+        history in the walls constructed from old barns, hear the live music coming from the stage, and feel 
+        the spirit of the people who've been welcomed through its doors by the signed dollar bills left on the |
+        ceiling - proof they were once lucky enough to have been there! Next time you're in the Santa Ynez Valley |
+        come by the Maverick Saloon for a beer and perhaps a line dance, and become a part of our history.

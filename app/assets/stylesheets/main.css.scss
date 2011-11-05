@@ -1,3 +1,61 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.main-home {
+  margin: -27px;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px;
+  height: 700px;
+  
+  .top {
+    width: 100%;
+    color: white;
+    margin-left: -30px;
+    
+    .buttons {
+      width: 43%;
+      float: left;
+      border-color: white;
+      border-width: 0;
+      border-style: solid;
+      padding: 0;
+      margin: 0;
+    }
+    .rotate-img {
+      width: 57%;
+      float: right;
+      border-color: white;
+      border-width: 0;
+      border-style: solid;
+    }
+  }
+  
+  .bottom {
+    width: 100%;
+    color: white;
+    margin-left: -30px;
+    
+    .left-side {
+      width: 60%;
+      float: left;
+      
+      h1 {
+        color: red;
+        font: small-caps 16px/16px "Times New Roman", serif;
+      }
+      p {
+        border-top: white dotted 1px;
+        font-family: Arial,Tahoma,Verdana;
+        color: white;
+        padding-top: 2px;
+        margin-top: 1em;
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+    .right-side {
+      float: right;
+    }
+  }
+}
