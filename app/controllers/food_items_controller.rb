@@ -3,6 +3,7 @@ class FoodItemsController < ApplicationController
   # GET /food_items.json
   def index
     @food_items = FoodItem.all
+    @foods = FoodItem.find(:all).group_by { |food| food.category }
 
     respond_to do |format|
       format.html # index.html.erb

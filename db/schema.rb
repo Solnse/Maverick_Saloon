@@ -25,8 +25,15 @@ ActiveRecord::Schema.define(:version => 20111028005336) do
     t.datetime "updated_at"
   end
 
-# Could not dump table "food_items" because of following StandardError
-#   Unknown type 'category' for column 'string'
+  create_table "food_items", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.decimal  "price",       :precision => 8, :scale => 2
+    t.string   "img_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "category"
+  end
 
   create_table "line_items", :force => true do |t|
     t.integer  "product_id"

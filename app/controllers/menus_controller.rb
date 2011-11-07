@@ -4,6 +4,7 @@ class MenusController < ApplicationController
   # GET /menus
   # GET /menus.json
   def index
+    @foods = FoodItem.find(:all).group_by { |food| food.category }
     @food_items = FoodItem.all
     @menus = Menu.all
     respond_to do |format|

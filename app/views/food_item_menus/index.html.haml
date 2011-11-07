@@ -1,17 +1,16 @@
+
+
 %h1 Listing food_item_menus
 
-%table
-  %tr
-    %th
-    %th
-    %th
-
-  - @food_item_menus.each do |food_item_menu|
-    %tr
-      %td= link_to 'Show', food_item_menu
-      %td= link_to 'Edit', edit_food_item_menu_path(food_item_menu)
-      %td= link_to 'Destroy', food_item_menu, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Food item menu', new_food_item_menu_path
+= @foods.each do |category, foods|
+  %p
+    = category
+  %ul
+    - foods.each do |foods|
+      - if foods.img_url?
+        .list_image
+          = link_to image_tag(foods.img_url, class: 'list_image'), asset_path(foods.img_url), target: 'new'
+      %li
+        = foods.name
+        = foods.description
+        = foods.price
