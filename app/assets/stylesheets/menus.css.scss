@@ -2,10 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .menus {
-  category {
+  .category {
     color: white;
     font-size: large;
     font-weight: bold;
+    text-align: center;
+    border: solid 2px red;
+    margin: 1em;
+    padding: 1em;
+    width: 30%;
+    margin-left: 250px;
   }
   .price_line {
     border-bottom-style: dotted;
