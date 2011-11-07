@@ -1,15 +1,17 @@
 = render :partial => 'menu_header'
 
 .menus
-  = @foods.each do |category, foods|
-    = category
-    - foods.each do |foods|
-      - if foods.img_url?
-        .list_image
-          = link_to image_tag(foods.img_url, class: 'list_image'), asset_path(foods.img_url), target: 'new'
-      %h3= foods.name
-      .list_description
-        = sanitize(foods.description)
-      .price_line
-        %span.price= number_to_currency(foods.price)
+  - @foods.each do |category, foods|
+    .category
+      = category.titleize
+      .menus
+        - foods.each do |foods|
+          - if foods.img_url?
+            .list_image
+              = link_to image_tag(foods.img_url, class: 'list_image'), asset_path(foods.img_url), target: 'new'
+          %h3= foods.name
+          .list_description
+            = sanitize(foods.description)
+          .price_line
+            %span.price= number_to_currency(foods.price)
 
